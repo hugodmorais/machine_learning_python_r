@@ -7,8 +7,11 @@ import pandas as pd
 
 # Importing the dataset
 dataset = pd.read_csv('Data.csv')
+# iloc -> :-1 define a ultima coluna do ficheiro
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
+
+print(X, y)
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
